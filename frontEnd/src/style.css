@@ -1,0 +1,200 @@
+@font-face {
+    font-family: "pixel";
+    src: url(font/kongtext.ttf);
+}
+
+* {
+    font-family: "pixel";
+    color: white;    
+}
+.block-img{
+    width: 100%;
+    background-size: 2900px 1500px;
+    background-position: right 50% bottom 40%;
+    height: 108%;
+    position: absolute;
+    tranform: scale(0.5);
+    background-image: url(img/background_arcade.png);
+}
+#img-arc{
+    position: absolute;
+    width: 100%;
+    transform: scale(1.5);
+    height: 1044px;
+}
+#starter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu-play{
+    height: 4rem;
+    margin: 1rem;
+    top: 316px;
+    width: 14rem;
+    font-size: 1.2rem;
+    
+}
+.zoomIn{
+    transform: scale(3);
+    transition: 3s ease;
+}
+.zoomOut{
+    transform: scale(3);
+    transition: 3s ease;
+}
+
+body {
+    background-image: url("img/background_plaine.jpg");
+    background-repeat-y: no-repeat ;
+    height: 1043px;
+    background-size: cover;
+    width: 100%;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    min-height: 100vh;
+}
+
+h2, label{
+    text-shadow: 0 0 5px black ;
+}
+/*
+*   SECTION 
+*/
+.allies,
+.enemy {
+    margin-left: 60px;
+    margin-right: 60px;
+    min-height: 500px;
+    max-width: 35%;
+    justify-content: center;
+}
+
+.allies {
+    align-content: flex-start;
+}
+
+section {
+    min-height: 500px;
+    max-height: 500px;
+    max-width: 35%;
+    display: grid;
+    align-content: center;
+}
+
+article {
+    display: block;
+    text-align: center;
+}
+
+.allies img,
+.enemy img {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 250px;
+    max-height: 250px;
+    object-fit: contain;
+}
+
+.turn-arrow {
+    height: 250px;
+    align-content: start;
+}
+
+.turn-arrow img {
+    width: 175px;
+    height: 175px;
+    transition: all 1s ease-out;
+}
+
+.enemy-turn {
+    transform: rotate(-6367deg);
+}
+.quick-enemy-turn{
+    transform: rotate(-3470deg);
+}
+
+.allies-turn {
+    transform: rotate(-3350deg);
+}
+.quick-allies-turn{
+    transform: rotate(230deg);
+}
+
+.disableStyle {
+    opacity: 0;
+    transition: 2s ease;
+}
+.disable{
+    display: none;
+}
+/*
+history
+*/
+.history{
+    height: 80px;
+    align-self: flex-start;
+    display:flex;
+    justify-content: start;
+    position: fixed;
+    max-width: 100vh;
+    left: 1%;
+}
+.dead-enemy{
+ object-fit: contain;
+ width: 60px;
+filter: sepia(100%)
+}
+/*
+Framework modif
+*/
+.nes-progress {
+    width: 60%;
+    height: 18px;
+}
+
+.nes-table{
+    top: 351px;
+    left: 750px;
+    position: absolute;
+}
+
+.nes-container {
+    position: absolute !important;
+    width: 30vw;
+    top: 20%;
+    left: 35vw;
+    word-wrap: anywhere;
+    
+}
+
+.credit-tab{
+    width: 40vw;
+}
+
+.animeImgArc{
+    transform: scale(3);
+    transition: 3s ease;
+    opacity: 0;
+}
+
+.animeFight{
+    opacity: 1;
+    transition :3s ease;
+}
+.animeStarterFight{
+    opacity: 0;
+}
+.divScores{
+    right: -150px;
+}
+@media screen and (min-width: 1500px) {
+    body {
+        background-size: contain;
+    }
+}

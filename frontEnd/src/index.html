@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Fighting surface</title>
+</head>
+
+<body class="nes-pointer">
+    <div class="block-img blockImg"></div>
+    <div id="starter">
+
+        <button type="button" class="nes-btn is-warning menuPlay menu-play menuPlay">Jouer</button>
+        <div class="divScores nes-table-responsive disable animeStarterFight">
+            <table class="nes-table is-bordered is-centered is-dark ">
+              <thead>
+                <tr>
+                  <th>Pseudo</th>
+                  <th>Scores</th>
+                  <th>Times</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="scoresUsers">
+                  
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        <button type="button" class="nes-btn is-warning menuPlay menu-play menuScores">Scores</button>
+        <button type="button" class="nes-btn is-warning menuPlay menu-play menuCredit">Crédit</button>
+        <div class="nes-container with-title is-centered is-dark credit-tab divCred animeStarterFight disable">
+            <h1 class="title">Merci a </p>
+            <p> https://twitter.com/pixelpavanz barzork_guerriere barzork_souriciere
+                _____________________________________________________________________
+                https://twitter.com/penusbmic barzork_tenebreux
+                _____________________________________________________________________
+                https://twitter.com/LivvyGlizzy barzork_plante_folle
+                _____________________________________________________________________
+                https://twitter.com/Kaktuspirat barzork_la_mort
+                _____________________________________________________________________
+                https://twitter.com/nashor_kim gueriere barzork_samourai et barzork_ninja
+                _____________________________________________________________________
+                https://twitter.com/pita_akm barzork_breton
+                _____________________________________________________________________
+                https://twitter.com/Sturo barzork_epice
+                _____________________________________________________________________
+                https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/8633e6aeaa44935.png grave.png</p>
+          </div>
+    </div>
+    <article class="nes-container with-title is-centered is-dark divAcc">
+        <p class="title">Status</p>
+        <p class="status-bar">Bienvenue dans Fighting Surface</p>
+    </article>
+    <main class="disable animeStarterFight">
+        <article class="history">
+            <!-- <img src="img/barzork_bourrin.png" alt="" class="dead-enemy"> -->
+
+        </article>
+        <section class="allies">
+
+            <article class="action">
+                <button type="button" class="nes-btn is-disabled  attack-js">Attack</button>
+                <!-- Doit être gris par default une fois 5 attaque si le combat est encore ok alors il est activé-->
+                <button type="button" class="nes-btn is-disabled special-js">Special</button>
+            </article>
+            <article>
+                <h2 class="allies-pp"></h2>
+                <img src="img/fighter.png" alt="">
+            </article>
+            <article class="life-bar">
+                <label for="allies-bar">Point de vie</label>
+                <progress class="nes-progress is-success" id="allies-bar" max="100" value="70"> 70% </progress>
+            </article>
+        </section>
+        <section class="turn-arrow">
+            <img src="img/arrow.png" alt="">
+        </section>
+        <section class="enemy">
+            <article>
+                <button type="button" class="nes-btn is-warning enemies-generator ">Genere un adversaire</button>
+            </article>
+            <article class="disable">
+                <h2 class="enemy-title"></h2>
+                <img src="" alt="" class="enemy-pp">
+            </article>
+            <article class="life-bar disable">
+                <label for="enemy-bar">Point de vie</label>
+                <progress class="nes-progress is-success" id="enemy-bar" max="100" value="100">
+                    <p>70%</p>
+                </progress>
+            </article>
+        </section>
+    </main>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
